@@ -1,0 +1,20 @@
+<div class="todo-list-wrapper">
+    <div class="mx-auto col-10">
+        <h5>TODO List</h5>
+        <hr>
+
+        <cards-list [listRef]="todoListRef" [cardRef]="todoItemCardRef" [data]="todoList"></cards-list>
+    </div>
+    <hr>
+
+
+</div>
+<ng-template #todoItemCardRef let-todo="data">
+    <cards [todoItem]="todo" (todoDelete)="deleteTodo($event)" (todoEdit)="editTodo($event)"></cards>
+</ng-template>
+
+<ng-template #todoListRef let-todos="data">
+    <ul class="list-group mb-3">
+        <list *ngFor="let todo of todos" [todoItem]="todo" (todoDelete)="deleteTodo($event)" (todoEdit)="editTodo($event)"></list>
+    </ul>
+</ng-template>
