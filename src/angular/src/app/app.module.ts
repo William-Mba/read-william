@@ -14,7 +14,6 @@ import { PageTwoComponent } from './page-two/page-two.component';
 import { PageThreeComponent } from './page-three/page-three.component';
 import { NgTemplateOutletExample2Component } from './ng-template-outlet-example2/ng-template-outlet-example2.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
-import { CardsListModule } from './shared/cards-list/cards-list.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,6 @@ import { CardsListModule } from './shared/cards-list/cards-list.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CardsListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
