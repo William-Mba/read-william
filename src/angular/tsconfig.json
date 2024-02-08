@@ -3,6 +3,23 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "common": [
+        "dist/common"
+      ],
+      "core": [
+        "dist/core"
+      ],
+      "ng-tailwind-core": [
+        "dist/ng-tailwind-core"
+      ],
+      "ng-tailwind-ui": [
+        "dist/ng-tailwind-ui"
+      ],
+      "ngx-tailwind-ui": [
+        "dist/ngx-tailwind-ui"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

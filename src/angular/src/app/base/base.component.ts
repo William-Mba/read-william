@@ -1,16 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   template: ''
 })
-export class BaseComponent implements OnInit {
+export abstract class BaseComponent {
+  private router = inject(Router);
 
-  constructor(public router: Router) {}
-  ngOnInit (): void {}
-
-
-  openPage(routeName: string){
+  navigateTo(routeName: string){
     this.router.navigateByUrl(`/${routeName}`);
   }
 }
